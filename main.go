@@ -17,6 +17,8 @@ import (
 	"strings"
 )
 
+// trigger dif
+
 type Config struct {
 	Sourcegraphs []SourcegraphInstance `json:"sourcegraphs"`
 }
