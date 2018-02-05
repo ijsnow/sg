@@ -17,8 +17,6 @@ import (
 	"strings"
 )
 
-// trigger a diff for notifications
-
 type Config struct {
 	Sourcegraphs []SourcegraphInstance `json:"sourcegraphs"`
 }
@@ -29,12 +27,12 @@ type SourcegraphInstance struct {
 }
 
 func main() {
-	if err := run(); err != nil {
+	if err := runApp(); err != nil {
 		log.Fatal(err)
 	}
 }
 
-func run() error {
+func runApp() error {
 	searchQuery := flag.String("search", "", "a search query")
 	posFlag := flag.String("pos", "", "the position at which to open the file, formatted as \"L${line}:${col}\"")
 	flag.Parse()
